@@ -3,7 +3,6 @@ import Book from './Book.js'
 
 class BookList extends Component {
   render() {
-
   return (
     <div>
       <div className="row">
@@ -19,17 +18,25 @@ class BookList extends Component {
             </thead>
             <tbody>
               {this.props.bookList.map(book => {
-                console.log(book)
                 return (
-                  <Book book= {book}/>
+                  <Book book= {book} cartAdd={this.props.cartAdd}/>
                 )
               })}
             </tbody>
           </table>
         </div>
         <div className="col-4">
-        cart goes here
-        </div>
+        <h1>Checkout</h1>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>        </div>
       </div>
     </div>
 

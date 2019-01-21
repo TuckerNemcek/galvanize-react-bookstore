@@ -1,7 +1,9 @@
 import React , {Component} from 'react'
 import Book from './Book.js'
+import InCheckout from './InCheckout.js'
 
 class BookList extends Component {
+
   render() {
   return (
     <div>
@@ -35,6 +37,13 @@ class BookList extends Component {
             </tr>
           </thead>
           <tbody>
+            {this.props.inCart.map((item,i) => {
+              return (
+                <InCheckout key={i} item={item}/>
+              )
+            })
+            }
+
           </tbody>
         </table>        </div>
       </div>

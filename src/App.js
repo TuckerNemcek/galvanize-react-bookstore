@@ -38,7 +38,7 @@ class App extends Component {
       })
       return total
     }
-
+////////
     const titleSort = (input) => {
       let titleSorted = { ...this.state,
         bookList:this.state.bookList.filter(book => book.title.includes(input))
